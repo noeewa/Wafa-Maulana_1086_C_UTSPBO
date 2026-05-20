@@ -133,7 +133,7 @@ namespace Wafa_Maulana_1086_C_UTSPBO
         public override string HitungTotalHarga()
         {
             total = hargaTiket * jumlahTiket + biayaLounge;
-            return $"Total {total}";
+            return $"{total}";
         }
         public override void TampilInfo()
         {
