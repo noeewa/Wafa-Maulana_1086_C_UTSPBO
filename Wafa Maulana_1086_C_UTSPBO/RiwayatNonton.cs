@@ -6,11 +6,5 @@ using System.Threading.Tasks;
 
 namespace Wafa_Maulana_1086_C_UTSPBO
 {
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-
-        }
-    }
+    
 }

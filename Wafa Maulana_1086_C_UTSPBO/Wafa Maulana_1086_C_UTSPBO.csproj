@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ParentClass.cs" />
+    <Compile Include="ClassTiket.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RiwayatNonton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
