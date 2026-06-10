@@ -11,7 +11,7 @@ namespace Wafa_Maulana_1086_C_UTSPBO
         private int jumlahTiket { get; set; }
         private double hargaTiket { get; set; }
 
-        private List<RiwayatNonton> daftarRiwayat;
+        private List<RiwayatNonton> daftarRiwayat = new List<RiwayatNonton>();
 
         public TiketReguler(string namaPenonton, int idBooking, string judulFilm, double hargaTiket, int jumlahTiket) : base(namaPenonton, idBooking, judulFilm)
         {
@@ -52,13 +52,13 @@ namespace Wafa_Maulana_1086_C_UTSPBO
             return (jumlahTiket * hargaTiket);
         }
 
-        public void tambahRiwayat(int jumlah, DateTime tanggal)
+        public override void tambahRiwayat()
         {
-            var riwayat = new RiwayatNonton("Reguler", jumlah, DateTime.Now); // "this" = TiketBioskop ini
+            var riwayat = new RiwayatNonton("Reguler", this.jumlahTiket, DateTime.Now); // "this" = TiketBioskop ini
             daftarRiwayat.Add(riwayat);
         }
 
-        public void cetakRiwayat()
+        public override void cetakRiwayat()
         {
             this.tampilInfo();
             for (int i = 0; i < daftarRiwayat.Count(); i++)
@@ -76,7 +76,7 @@ namespace Wafa_Maulana_1086_C_UTSPBO
         private double hargaTiket { get; set; }
         private double biayaLounge { get; set; }
 
-        private List<RiwayatNonton> daftarRiwayat;
+        private List<RiwayatNonton> daftarRiwayat = new List<RiwayatNonton>();
 
         class RiwayatNonton
         {
@@ -116,14 +116,14 @@ namespace Wafa_Maulana_1086_C_UTSPBO
             return (jumlahTiket * hargaTiket) + biayaLounge;
         }
 
-        public void tambahRiwayat(int jumlah, DateTime tanggal)
+        public override void tambahRiwayat()
         {
-            var riwayat = new RiwayatNonton("Premiere", jumlah, DateTime.Now);
+            var riwayat = new RiwayatNonton("Premiere", this.jumlahTiket, DateTime.Now);
             daftarRiwayat.Add(riwayat);
         }
 
 
-        public void cetakRiwayat()
+        public override void cetakRiwayat()
         {
             this.tampilInfo();
             for (int i = 0; i < daftarRiwayat.Count(); i++)
@@ -134,12 +134,6 @@ namespace Wafa_Maulana_1086_C_UTSPBO
             }
         }
 
-
-
-
     }
-
-
-
 
 }

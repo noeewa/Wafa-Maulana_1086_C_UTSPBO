@@ -19,7 +19,11 @@ namespace Wafa_Maulana_1086_C_UTSPBO
             judulFilm = judul;
         }
 
-        
+        public abstract void tambahRiwayat();
+
+
+        public abstract void cetakRiwayat();
+
 
         public abstract double hitungTotalHarga();
         public void tampilInfo()
