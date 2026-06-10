@@ -17,7 +17,8 @@ namespace Wafa_Maulana_1086_C_UTSPBO
             tiketPremiere.tambahRiwayat();
             tiketReguler.tambahRiwayat();
 
-            tiketPremiere.tambahRiwayat();
+            tiketReguler.cetakRiwayat();
+            tiketPremiere.cetakRiwayat();
         }
     }
 }
